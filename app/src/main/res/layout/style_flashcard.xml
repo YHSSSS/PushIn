@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/flashcard_view_background"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/darkBlue">
+
+        <ImageView
+            android:id="@+id/delete_topic_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_delete_white_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/delete_topic_icon"
+            android:text="DELETE"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/flashcard_view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/cardview_light_background"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_flashcard_bookmark"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                android:id="@+id/b_flashcard_bookmark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_star_border_yellow_24dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_flashcard_list_image"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_flashcard_bookmark"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+                android:id="@+id/image_flashcardImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@mipmap/ic_launcher_round"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_flashcard_list_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/t_flashcardTitle"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/purpleBlue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/t_flashcardTitle"
+                android:layout_marginTop="1dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/t_flashcardText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/t_flashcardTitle"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/purpleBlue"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/t_flashcardTimestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="5dp"
+            android:gravity="end"
+            android:textColor="@color/purpleBlue"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

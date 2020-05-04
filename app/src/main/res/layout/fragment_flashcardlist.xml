@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flashcardRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_flashcard_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkBlue">
+
+            <ImageButton
+                android:id="@+id/b_flashcard_expand"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_expand_less_24dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_edit_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_flashcard_expand"
+            android:padding="10dp">
+
+            <Spinner
+                android:id="@+id/s_update_topic"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Topic Title:"
+                android:textColor="@color/purpleBlue"
+                android:layout_below="@+id/s_update_topic"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/i_topicTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/t1"
+                android:background="@android:color/transparent"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:maxLength="100"
+                android:textSize="15sp"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/t_editTopicTitleTextCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/i_topicTitle"
+                android:gravity="end"
+                android:text="0/100"
+                android:textColor="@color/purpleBlue"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/i_topicTitle"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="@color/purpleBlue"
+                android:text="Topic Description:"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/i_topicDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/t2"
+                android:background="@android:color/transparent"
+                android:gravity="top|start"
+                android:maxLength="1200"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/t_editTopicDetailTextCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/i_topicDescription"
+                android:gravity="end"
+                android:textColor="@color/purpleBlue"
+                android:text="0/1200"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/b_topicConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@+id/t_editTopicDetailTextCount"
+                android:layout_marginTop="5dp"
+                android:background="@color/purpleBlue"
+                android:textColor="@color/white"
+                android:text="SAVE" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/layout_edit_topic"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_edit_topic">
+
+            <TextView
+                android:id="@+id/t_empty_flashcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Click the button at the bottom to create a new flashcard"
+                android:textSize="15sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/l_flashcardlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

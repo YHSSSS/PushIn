@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/create_exam"
+        android:title="@string/create_exam"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/create_topic"
+        android:title="@string/create_topic"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/create_flashcard"
+        android:title="@string/create_flashcard"
+        app:showAsAction="never" />
+</menu>

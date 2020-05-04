@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/side_nav_bar"
+    android:padding="20dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/image_userHeadProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/t_userNicknameinNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/image_userHeadProfile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/cardview_light_background" />
+
+    <TextView
+        android:id="@+id/t_userEmailinNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/t_userNicknameinNav"
+        android:textColor="@color/cardview_light_background" />
+
+    <TextView
+        android:id="@+id/t6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/t_userEmailinNav"
+        android:text="Get tutorial from"
+        android:textColor="@color/cardview_light_background" />
+
+    <TextView
+        android:id="@+id/t_tutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t_userEmailinNav"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/t6"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:text="YouTube"
+        android:textColor="@color/skyBlue" />
+
+</RelativeLayout>

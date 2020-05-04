@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".interfaceFragment.examlist.CreateExamFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_moduleSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purpleBlue"
+                android:text="Please select the exam for this flashcard"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/s_flashcardmodule"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@id/textView19"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_topicSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_moduleSpinner"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purpleBlue"
+                android:text="Please select the topic for this flashcard"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/s_flashcardtopic"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@id/textView20"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_contentTypeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_topicSpinner"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purpleBlue"
+                android:text="Please select the type of the content"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/s_flashcardContent"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@id/textView14"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_intsetFlashcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_contentTypeSpinner"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp">
+
+            <Button
+                android:id="@+id/b_insertFlashcard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/purpleBlue"
+                android:textColor="@color/white"
+                android:text="INSERT" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</FrameLayout>

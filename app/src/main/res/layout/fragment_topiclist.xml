@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topicRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_topic_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkBlue">
+
+            <ImageButton
+                android:id="@+id/b_topic_expand"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_expand_less_24dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_edit_exam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_topic_expand"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_edit_exam_plus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/purpleBlue"
+                    android:text="Exam Name:"
+                    android:textSize="10sp" />
+
+                <EditText
+                    android:id="@+id/i_moduleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t1"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:inputType="textPersonName"
+                    android:maxLength="60" />
+
+                <TextView
+                    android:id="@+id/t_count_exam_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/i_moduleName"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/purpleBlue"
+                    android:text="0/60" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_pick_exam_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t_count_exam_name">
+
+                    <Button
+                        android:id="@+id/b_selectExamDate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/ic_date_range_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/t_selectExamDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/b_selectExamDate"
+                        android:gravity="center"
+                        android:textColor="@color/purpleBlue"
+                        android:text="Pick the date of the exam"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_pick_exam_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_pick_exam_date">
+
+                    <Button
+                        android:id="@+id/b_selectExamTime"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/ic_access_time_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/t_selectExamTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/purpleBlue"
+                        android:layout_toRightOf="@+id/b_selectExamTime"
+                        android:gravity="center"
+                        android:text="Pick the time of the exam"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/b_moduleConfirm"
+                    android:layout_width="406dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/layout_pick_exam_time"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/purpleBlue"
+                    android:textColor="@color/white"
+                    android:text="SAVE" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/layout_edit_exam"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_edit_exam">
+
+            <TextView
+                android:id="@+id/t_empty_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Click the button at the bottom to create a new topic"
+                android:textSize="15sp"  />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/l_topiclist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

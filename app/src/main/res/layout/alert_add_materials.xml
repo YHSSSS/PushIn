@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/b_create_exam_add_materials"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:background="@color/darkBlue"
+        android:text="CREATE AN EXAM HERE" />
+
+    <Spinner
+        android:id="@+id/s_add_materials_exam"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/b_create_exam_add_materials" />
+
+    <Button
+        android:id="@+id/b_add_materials_positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/s_add_materials_exam"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:text="Yes"
+        android:textColor="@color/darkBlue"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/b_add_materials_negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/s_add_materials_exam"
+        android:layout_toLeftOf="@+id/b_add_materials_positive"
+        android:background="@android:color/transparent"
+        android:text="Cancel"
+        android:textColor="@color/darkBlue"
+        android:textSize="13sp" />
+
+</RelativeLayout>

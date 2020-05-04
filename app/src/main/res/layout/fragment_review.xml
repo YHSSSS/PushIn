@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reviewRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please pick an exam that you want to review"
+            android:textColor="@color/darkBlue" />
+
+        <Spinner
+            android:id="@+id/s_review_exam"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/t3" />
+
+        <RelativeLayout
+            android:id="@+id/layout_review"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/s_review_exam">
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Topic"
+                android:textColor="@color/darkBlue" />
+
+            <RelativeLayout
+                android:id="@+id/layout_review_topic_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/darkBlue"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_below="@+id/t4">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/l_review_topic_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"/>
+
+                <TextView
+                    android:id="@+id/t_empty_review_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="You didn't have a topic yet"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/t5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_review_topic_list"
+                android:layout_marginTop="10dp"
+                android:text="Flashcard"
+                android:textColor="@color/darkBlue" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/darkBlue"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_below="@+id/t5">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/l_review_flashcard_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="horizontal" />
+
+                <TextView
+                    android:id="@+id/t_empty_review_flashcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="You didn't have a flashcard yet"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
