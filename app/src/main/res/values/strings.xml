@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PushIn</string>
+    <string name="register_page">Register An Account</string>
+    //menu string
+    <string name="menu_note">NOTES</string>
+    <string name="menu_review">REVIEW</string>
+    <string name="menu_profile">PROFILE</string>
+    <string name="menu_lecturematerials">LECTURE MATERIALS</string>
+    //create options string
+    <string name="create_exam">EXAM</string>
+    <string name="create_topic">TOPIC</string>
+    <string name="create_flashcard">FLASHCARD</string>
+    //setting options string
+    <string name="logout">LOG OUT</string>
+    //create page string
+    <string name="create_examTitle">CREATE AN EXAM SCHEDULE</string>
+    <string name="create_topicTitle">CREATE A TOPIC</string>
+    <string name="create_flashcardTitle">CREATE A FLASHCARD</string>
+    //list string
+    <string name="examlist">EXAM LIST</string>
+    <string name="topiclist">TOPIC LIST</string>
+    <string name="flashcardlist">FLASHCARD LIST</string>
+    <string name="flashcard">SINGLE FLASHCARD</string>
+
+    <string name="gotit">GOT IT</string>
+    <string name="watchnow">WATCH NOW</string>
+
+    <string name="level_title">Please select your level</string>
+
+</resources>

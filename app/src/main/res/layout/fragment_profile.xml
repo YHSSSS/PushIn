@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/image_userProfile"
+                                android:layout_width="180dp"
+                                android:layout_height="180dp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                android:clickable="true"
+                                android:adjustViewBounds="true"
+                                android:background="@android:color/transparent"
+                                android:src="@mipmap/ic_launcher_round" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:textColor="@color/purpleBlue"
+                                android:text="Click To Change Profile Photo" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/purpleBlue"
+                                android:text="Nickname:" />
+
+                            <EditText
+                                android:id="@+id/i_userNickname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:textColor="@color/black"
+                                android:inputType="textPersonName" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/purpleBlue"
+                                android:text="Major:" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_major"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp">
+
+                                <RadioButton
+                                    android:id="@+id/r_cs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:textColor="@color/purpleBlue"
+                                    android:text="Computer Science" />
+
+                                <RadioButton
+                                    android:id="@+id/r_ap"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:textColor="@color/purpleBlue"
+                                    android:text="Applied Computing" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Level:"
+                                android:textColor="@color/purpleBlue"/>
+
+                            <Spinner
+                                android:id="@+id/s_userLevel"
+                                android:layout_width="match_parent"
+                                android:layout_height="37dp" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/b_saveProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/purpleBlue"
+                            android:textColor="@color/white"
+                            android:text="SAVE" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

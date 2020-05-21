@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".interfaceFragment.examlist.CreateExamFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subject Name or Exam Name:"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/purpleBlue"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/i_create_moduleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView8"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:maxLength="60"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+        <TextView
+            android:id="@+id/t_create_count_exam_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/i_create_moduleName"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/purpleBlue"
+            android:text="0/60" />
+
+        <Button
+            android:id="@+id/b_selectExamDate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/i_create_moduleName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_date_range_black_24dp" />
+
+        <TextView
+            android:id="@+id/t_selectExamDate"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Pick an exam date"
+            android:layout_below="@+id/i_create_moduleName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="@color/purpleBlue"
+            android:layout_toRightOf="@+id/b_selectExamDate"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/b_selectExamTime"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/b_selectExamDate"
+            android:background="@drawable/ic_access_time_black_24dp" />
+
+        <TextView
+            android:id="@+id/t_selectExamTime"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="20dp"
+            android:text="Pick an exam time"
+            android:layout_toRightOf="@+id/b_selectExamTime"
+            android:layout_below="@+id/b_selectExamDate"
+            android:textColor="@color/purpleBlue"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/b_moduleConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/b_selectExamTime"
+            android:background="@color/purpleBlue"
+            android:textColor="@color/white"
+            android:text="Confirm" />
+
+    </RelativeLayout>
+</FrameLayout>

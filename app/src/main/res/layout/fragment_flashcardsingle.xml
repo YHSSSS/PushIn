@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:drawable/dialog_holo_light_frame">
+
+        <Spinner
+            android:id="@+id/s_update_flashcard_topic"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/layout_flashcard_paragraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/s_update_flashcard_topic"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/i_flashcardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:inputType="text"
+                android:maxLength="100"
+                android:text="Enter title here"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/i_flashcardTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/t_flashcard_single_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/i_flashcardTitle"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/purpleBlue"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/t_countTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/i_flashcardTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/t_flashcard_single_timestamp"
+                android:gravity="end"
+                android:text="0/50"
+                android:textColor="@color/purpleBlue"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/t_countTitle"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:id="@+id/layout_flashcard_single_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/t_flashcard_single_timestamp"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/i_flashcardText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="left|top"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:text="Enter text here"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_flashcard_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/s_update_flashcard_topic"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/image_flashcardImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:background="@mipmap/ic_launcher_round"
+                android:scaleType="fitXY" />
+
+            <Button
+                android:id="@+id/b_uploadImageFlashcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_flashcardImage"
+                android:layout_marginTop="10dp"
+                android:background="@color/purpleBlue"
+                android:text="UPLOADANEWIMAGE"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/b_saveImageFlashcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/b_uploadImageFlashcard"
+                android:layout_marginTop="10dp"
+                android:background="@color/purpleBlue"
+                android:text="SAVE"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
